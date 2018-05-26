@@ -1,11 +1,23 @@
 public class U1 extends Rocket {
 
 
-    double cost = 100000000.0;
-    double weight = 10.0;
-    double maxWeight = 18.0;
-    double CoLE = (4/100)*(Item.getWeight()/8);
-    double CoLC = (8/100)*(Item.getWeight()/8);
+    private int cost = 100000000;
+    private int weight = 10;
+    private int maxWeight = 18;
+    private double CoLE;
+    private double CoLC;
 
+    @Override
+    public boolean launch(){
+        CoLE = (5/100)*(Item.getWeight()/8);
+        if (CoLE>=Math.random());
+        return false;
+    }
 
+    @Override
+    public boolean land(){
+        CoLC = (1/100)*(Item.getWeight()/8);
+        if (CoLC>=Math.random());
+        return false;
+    }
 }

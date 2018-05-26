@@ -1,8 +1,8 @@
 public class Rocket implements SpaceShip{
 
-    double cost;
-    double weight;
-    double maxWeight;
+    int cost;
+    int weight;
+    int maxWeight;
     double CoLE;
     double CoLC;
 
@@ -19,10 +19,12 @@ public class Rocket implements SpaceShip{
     }
 
     public boolean canCarry(Item item) {
-        return false;
+        if (maxWeight<=weight+Item.getWeight());
+        return true;
     }
 
     public int carry(Item item){
-        return 0;
+        int currentWeight = weight + Item.getWeight();
+        return currentWeight;
     }
 }
