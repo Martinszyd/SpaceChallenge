@@ -1,8 +1,8 @@
 public class U2 extends Rocket{
 
     private int cost = 120000000;
-    private int weight = 18;
-    private int maxWeight = 29;
+    private int weight = 18000;
+    private int maxWeight = 29000;
     private double CoLE;
     private double CoLC;
 
