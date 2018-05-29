@@ -19,12 +19,12 @@ public class Rocket implements SpaceShip{
     }
 
     public boolean canCarry(Item item) {
-        if (maxWeight<=weight+Item.getWeight());
+        if (maxWeight<=weight+item.getWeight());
         return true;
     }
 
     public int carry(Item item){
-        int currentWeight = weight + Item.getWeight();
+        int currentWeight = weight + item.getWeight();
         return currentWeight;
     }
 }

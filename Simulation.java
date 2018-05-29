@@ -8,15 +8,16 @@ public class Simulation {
 
     private List<Item> items = new ArrayList();
 
+
         public List<Item> loadItems () {
             File ph1 = new File("phase-1.txt");
+
             try {
                 Scanner scan1 = new Scanner(ph1);
                 while (scan1.hasNextLine()){
+                    Item item  = new Item(scan1.nextLine(), scan1.nextInt());
                     items = items.add(scan1.nextLine(), scan1.nextInt());
                 }
-
-
             } catch (FileNotFoundException e) {
                 e.getMessage();
             }

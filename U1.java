@@ -7,16 +7,17 @@ public class U1 extends Rocket {
     private double CoLE;
     private double CoLC;
 
+    Item item = new Item();
     @Override
     public boolean launch(){
-        CoLE = (5/100)*(Item.getWeight()/8);
+        CoLE = (5/100)*(item.getWeight()/8);
         if (CoLE>=Math.random());
         return false;
     }
 
     @Override
     public boolean land(){
-        CoLC = (1/100)*(Item.getWeight()/8);
+        CoLC = (1/100)*(item.getWeight()/8);
         if (CoLC>=Math.random());
         return false;
     }
