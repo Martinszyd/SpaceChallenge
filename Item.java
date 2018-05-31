@@ -1,7 +1,7 @@
 public class Item {
 
-    private String name;
-    private int weight;
+    String name;
+    int weight;
 
     public Item() {
     }

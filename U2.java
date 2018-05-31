@@ -1,24 +1,28 @@
+import java.util.Random;
+
 public class U2 extends Rocket{
 
-    private int cost = 120000000;
-    private int weight = 18000;
-    private int maxWeight = 29000;
-    private double CoLE;
-    private double CoLC;
+    U2() {
+        rocketCost = 120;                    // Rocket cost = $120 Million
+        rocketWeight = 18000;                // Rocket weight = 18000 kilograms
+        maxWeight = 29000;             // Rocket Max weight (with cargo) = 29000 kilograms
+        rateExplosion = 0.04;                // 4% rate of launch explosion
+        rateCrash = 0.08;                    // 8% rate of landing crash
+        cargoLimit = maxWeight - rocketWeight;
+        currentWeight = rocketWeight;
+        random = new Random().nextDouble();     // generates a new random number between 0 and 0.9999999999....
+    }
 
-    Item item = new Item();
     @Override
     public boolean launch(){
-        CoLE = (4/100)*(item.getWeight()/11);
-        if (CoLE>=Math.random());
-        return false;
+        this.CoLE = rateExplosion*(cargoCarried/cargoLimit);
+        return !(this.CoLE >= this.random);
     }
 
     @Override
     public boolean land(){
-        CoLC = (8/100)*(item.getWeight()/11);
-        if (CoLC>=Math.random());
-        return false;
+        this.CoLC = rateCrash*(cargoCarried/cargoLimit);
+        return !(this.CoLC >= this.random);
     }
 
 

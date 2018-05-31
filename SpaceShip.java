@@ -4,7 +4,7 @@ public interface SpaceShip {
 
     boolean land();
 
-    boolean canCarry(Item item);
+    boolean canCarry(Item cargo);
 
-    int carry(Item item);
+    void carry(Item cargo);
 }
