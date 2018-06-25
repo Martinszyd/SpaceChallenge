@@ -1,9 +1,10 @@
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.Before;
+import org.junit.Test;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.junit.Assert.assertEquals;
 import java.util.Random;
 
-import static org.junit.jupiter.api.Assertions.*;
 
 class U2Test {
 
@@ -16,17 +17,23 @@ class U2Test {
     int cargoLimit;
 
 
-    @BeforeEach
+    @Before
 
     @Test
     boolean launch() {
+        cargoCarried=10;
+        cargoLimit=36;
         this.CoLE = rateExplosion*(cargoCarried/cargoLimit);
         return !(this.CoLE >= this.random);
+        assertThat(CoLE).isEqualTo(0.0111);
     }
 
     @Test
     boolean land() {
-        this.CoLC = rateCrash*(cargoCarried/cargoLimit);
+        cargoCarried = 10;
+        cargoLimit = 36;
+        this.CoLC = rateCrash * (cargoCarried / cargoLimit);
         return !(this.CoLC >= this.random);
+        assertThat(CoLC).isEqualTo(0.02222);
     }
 }
